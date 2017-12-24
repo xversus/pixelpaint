@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 70px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.Canvas {
+    display: inline-block;
+}
+
+.Cell {
+  width: 2.857%;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+
+.Cell:hover {
+    cursor: crosshair;
+}
+
+.canvasLine {
+    width: 700px;
+    height: 20px;
+}
+
+.Palette {
+    width: 90%;
+    height: 70px;
+    float: left;
+    clear: both;
+    background-color: beige;
+    border: 2px solid #000;
+    margin: 5px 5%;
+    border-radius: 100px;
+}
+
+.PaletteElement {
+    height: 80%;
+    width: 56px;
+    border: 1px solid;
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin-left: 4px;
+    top: 10%;
+    left: 5px;
+    border-radius: 100px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
