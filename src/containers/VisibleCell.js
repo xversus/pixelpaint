@@ -25,6 +25,6 @@ const mergeProps = (propsFromState, propsFromDispatch, ownProps) => {
     };
 };
 
-const CellController = connect(mapStateToProps, mapDispatchToProps, mergeProps)(Cell);
+const VisibleCell = connect(mapStateToProps, mapDispatchToProps, mergeProps)(Cell);
 
-export default CellController;
+export default VisibleCell;

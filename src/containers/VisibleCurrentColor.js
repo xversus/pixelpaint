@@ -7,6 +7,6 @@ const mapStateToProps = state => {
     }
 };
 
-const CurrentColorController = connect(mapStateToProps)(CurrentColorView);
+const VisibleCurrentColorView = connect(mapStateToProps)(CurrentColorView);
 
-export default CurrentColorController;
+export default VisibleCurrentColorView;

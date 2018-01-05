@@ -10,6 +10,6 @@ const mapDispatchToProps = dispatch => {
     }
 };
 
-const PaletteElementController = connect(null, mapDispatchToProps)(PaletteElement);
+const VisiblePaletteElement = connect(null, mapDispatchToProps)(PaletteElement);
 
-export default PaletteElementController;
+export default VisiblePaletteElement;
