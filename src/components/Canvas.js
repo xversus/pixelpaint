@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import CellController from "../containers/CellController.js";
+import CellController from "../containers/VisibleCell.js";
 
 const Canvas = function() {
     let table = [];
