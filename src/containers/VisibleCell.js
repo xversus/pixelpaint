@@ -4,8 +4,7 @@ import Cell from "../components/Cell";
 
 const mapStateToProps = state => {
     return {
-        cells: state.cells,
-        currentColor: state.currentColor
+        cells: state.cells
     }
 };
 
