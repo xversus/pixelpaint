@@ -1,8 +1,9 @@
-import { CHANGE_COLOR, PAINT_CELL } from "../actions/index";
+import {CHANGE_COLOR, CHANGE_PALETTE_VISIBILITY, CLEAR_CANVAS, LOAD_PICTURE, PAINT_CELL} from "../actions/index";
 
 const initialState = {
     cells: new Array(1225).fill("aliceblue"),
-    currentColor: "aliceblue"
+    currentColor: "aliceblue",
+    paletteVisibility: "inline-block"
 };
 
 function makeAction(state = initialState, action) {
@@ -12,9 +13,22 @@ function makeAction(state = initialState, action) {
         case PAINT_CELL:
             return {
                 ...state,
-                cells: state.cells.map(function (elem, index) {
-                    return action.cellId === index ? state.currentColor : elem;
-                })
+                cells: state.cells.map((elem, index) => (action.cellId === index ? state.currentColor : elem))
+            };
+        case CLEAR_CANVAS:
+            return {
+                ...state,
+                cells: state.cells.map(() => ("aliceblue"))
+            };
+        case LOAD_PICTURE:
+            return {
+                ...state,
+                cells: JSON.parse(localStorage.getItem("canvas"))
+            };
+        case CHANGE_PALETTE_VISIBILITY:
+            return {
+                ...state,
+                paletteVisibility: state.paletteVisibility === "none" ? "inline-block" : "none"
             };
         default:
             return state;

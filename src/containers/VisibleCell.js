@@ -12,7 +12,7 @@ const mapDispatchToProps = dispatch => {
     return {
         onCellClick: (cellId) => {
              dispatch(paintCell(cellId))
-        },
+        }
     }
 };
 
@@ -20,7 +20,7 @@ const mergeProps = (propsFromState, propsFromDispatch, ownProps) => {
     return {
         onCellClick: propsFromDispatch.onCellClick,
         cellId: ownProps.cellId,
-        cellColor: propsFromState.cells[ownProps.cellId],
+        cellColor: propsFromState.cells[ownProps.cellId]
     };
 };
 

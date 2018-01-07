@@ -1,21 +1,20 @@
 import React, { Component } from "react";
-import logo from "../logo.svg";
 import "./App.css";
 import Canvas from "./Canvas.js";
-import ColorPalette from "./ColorPalette.js";
-
+import FunctionalPalette from "../containers/FunctionalPalette.js";
+import FunctionalNavigation from "../containers/FunctionalNavigation.js"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <FunctionalNavigation />
         </header>
 
         <Canvas />
         <p/>
-        <ColorPalette />
+        <FunctionalPalette />
 
       </div>
     );
