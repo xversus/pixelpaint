@@ -1,29 +1,19 @@
-import { connect } from "react-redux";
-import {changePaletteVisibility} from "../actions/index";
-import ColorPalette from "../components/ColorPalette";
+import { connect } from 'react-redux';
+import { changePaletteVisibility } from '../actions/index';
+import ColorPalette from '../components/ColorPalette.jsx';
 
 
-const mapStateToProps = state => {
-    return {
-        paletteVisibility: state.paletteVisibility
-    }
-};
+const mapStateToProps = state => ({
+  visibility: state.paletteVisibility,
+});
 
-const mapDispatchToProps = dispatch => {
-    return {
-        onHideClick: () => {
-            dispatch(changePaletteVisibility())
-        }
-    }
-};
+const mapDispatchToProps = dispatch => ({
+  onHideClick: () => {
+    dispatch(changePaletteVisibility());
+  },
+});
 
-const mergeProps = (propsFromState, propsFromDispatch) => {
-    return {
-        onHideClick: propsFromDispatch.onHideClick,
-        visibility: propsFromState.paletteVisibility
-    };
-};
-
-const FunctionalPalette = connect(mapStateToProps, mapDispatchToProps, mergeProps)(ColorPalette);
+const FunctionalPalette =
+connect(mapStateToProps, mapDispatchToProps)(ColorPalette);
 
 export default FunctionalPalette;
