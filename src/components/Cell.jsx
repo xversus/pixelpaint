@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './App.css';
+import '../stylesheets/App.css';
 
 const Cell = ({ onCellClick, cellColor, cellId }) => (
   <button
     style={{ backgroundColor: cellColor }}
-    className="Cell"
+    className='cell'
     onClick={() => {
                 onCellClick(cellId);
             }}

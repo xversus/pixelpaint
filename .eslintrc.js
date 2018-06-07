@@ -4,6 +4,7 @@ module.exports = {
         "browser": true,
       },
     "rules": {
-        "import/extensions": "off"
+        "import/extensions": "off",
+        "jsx-quotes": "prefer-single",
     }
 };

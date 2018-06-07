@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './App.css';
+import '../stylesheets/App.css';
 
 const Navigation = ({
   onClearClick, onSaveClick, onLoadClick,
@@ -9,30 +9,29 @@ const Navigation = ({
     <li>
       <button
         onClick={onClearClick}
-        className="navigationLink"
+        className='navigation-link'
       >
-                Clear the canvas
+        Clear the canvas
       </button>
     </li>
     <li>
       <button
         onClick={onSaveClick}
-        className="navigationLink"
+        className='navigation-link'
       >
-                Save the picture
+         Save the picture
       </button>
     </li>
     <li>
       <button
         onClick={onLoadClick}
-        className="navigationLink"
+        className='navigation-link'
       >
-                Load the picture
+        Load the picture
       </button>
     </li>
   </ul>
 );
-
 
 Navigation.propTypes = {
   onClearClick: PropTypes.func.isRequired,

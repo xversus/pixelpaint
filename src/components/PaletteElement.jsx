@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './App.css';
+import '../stylesheets/App.css';
 
 const PaletteElement = ({ color, onElemClick }) => (
   <div
     style={{ backgroundColor: color }}
-    className="PaletteElement"
-    onClick={
-             () => onElemClick(color)
-            }
+    className='palette-element'
+    onClick={() => onElemClick(color)}
   />
 );
 

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { changeColor } from '../actions/index';
+import { changeColor } from '../actions';
 import PaletteElement from '../components/PaletteElement.jsx';
 
 const mapDispatchToProps = dispatch => ({
@@ -8,6 +8,6 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-const VisiblePaletteElement = connect(null, mapDispatchToProps)(PaletteElement);
+const PaletteElementControl = connect(null, mapDispatchToProps)(PaletteElement);
 
-export default VisiblePaletteElement;
+export default PaletteElementControl;

@@ -1,7 +1,7 @@
 import {
   CHANGE_COLOR, CHANGE_PALETTE_VISIBILITY, CLEAR_CANVAS,
   LOAD_PICTURE, PAINT_CELL,
-} from '../actions/index';
+} from '../actions';
 
 const initialState = {
   cells: new Array(1225).fill('aliceblue'),
@@ -13,7 +13,8 @@ function makeAction(state = initialState, action) {
   switch (action.type) {
     case CHANGE_COLOR:
       return {
-        ...state, currentColor: action.payload,
+        ...state,
+        currentColor: action.payload,
       };
     case PAINT_CELL:
       return {
@@ -24,7 +25,7 @@ function makeAction(state = initialState, action) {
     case CLEAR_CANVAS:
       return {
         ...state,
-        cells: state.cells.map(() => ('aliceblue')),
+        cells: state.cells.map(() => 'aliceblue'),
       };
     case LOAD_PICTURE:
       return {

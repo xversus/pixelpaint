@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
-import { clearCanvas, loadPicture } from '../actions/index';
+import { clearCanvas, loadPicture } from '../actions';
 import Navigation from '../components/Navigation.jsx';
-
 
 const mapStateToProps = state => ({
   cells: state.cells,
@@ -24,7 +23,7 @@ const mergeProps = (propsFromState, propsFromDispatch) => ({
   },
 });
 
-const FunctionalNavigation =
+const NavigationControl =
 connect(mapStateToProps, mapDispatchToProps, mergeProps)(Navigation);
 
-export default FunctionalNavigation;
+export default NavigationControl;

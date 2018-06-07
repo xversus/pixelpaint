@@ -1,22 +1,20 @@
 import React from 'react';
-import './App.css';
+import '../stylesheets/App.css';
 import Canvas from './Canvas.jsx';
-import FunctionalPalette from '../containers/FunctionalPalette';
-import FunctionalNavigation from '../containers/FunctionalNavigation';
+import PaletteControl from '../containers/PaletteControl';
+import NavigationControl from '../containers/NavigationControl';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <FunctionalNavigation />
-      </header>
+const App = () => (
+  <div className='app'>
+    <header className='app-header'>
+      <NavigationControl />
+    </header>
 
-      <Canvas />
-      <p />
-      <FunctionalPalette />
+    <Canvas />
+    <p />
+    <PaletteControl />
 
-    </div>
-  );
-}
+  </div>
+);
 
 export default App;

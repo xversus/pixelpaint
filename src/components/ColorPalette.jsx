@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faAngleDown from '@fortawesome/fontawesome-free-solid/faAngleDown';
 import faAngleUp from '@fortawesome/fontawesome-free-solid/faAngleUp';
-import './App.css';
-import VisibleCurrentColorView from '../containers/VisibleCurrentColor';
-import VisiblePaletteElement from '../containers/VisiblePaletteElement';
+import '../stylesheets/App.css';
+import CurrentColorControl from '../containers/CurrentColorControl';
+import PaletteElementControl from '../containers/PaletteElementControl';
 
 const paletteColors = ['red', 'green', 'blue', 'yellow', 'orange', 'indigo',
   'black', 'white', 'magenta', 'gray', 'olive', 'navy',
@@ -22,18 +22,18 @@ const ColorPalette = ({ onHideClick, visibility }) => {
       />
       <br />
       <div
-        className="Palette"
+        className='palette'
         style={{ display: visibility }}
       >
         {
                     paletteColors.map(color =>
-                        (<VisiblePaletteElement
+                        (<PaletteElementControl
                           key={color}
                           color={color}
                         />))
                 }
-        <div className="verticalRule" />
-        <VisibleCurrentColorView color="aliceblue" />
+        <div className='vertical-rule' />
+        <CurrentColorControl color='aliceblue' />
       </div>
     </div>
   );

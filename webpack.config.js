@@ -1,6 +1,8 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
@@ -9,7 +11,12 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './public',
+    hot: true,
   },
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
   module: {
     rules: [
       {

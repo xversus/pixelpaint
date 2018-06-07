@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { changePaletteVisibility } from '../actions/index';
+import { changePaletteVisibility } from '../actions';
 import ColorPalette from '../components/ColorPalette.jsx';
 
 
@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-const FunctionalPalette =
+const PaletteControl =
 connect(mapStateToProps, mapDispatchToProps)(ColorPalette);
 
-export default FunctionalPalette;
+export default PaletteControl;

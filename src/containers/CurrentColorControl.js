@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { changeColor } from '../actions/index';
-import CurrentColorView, { anotherColorHandler }
-  from '../components/CurrentColorView.jsx';
+import { changeColor } from '../actions';
+import CurrentColor, { anotherColorHandler }
+  from '../components/CurrentColor.jsx';
 
 const mapStateToProps = state => ({
   color: state.currentColor,
@@ -21,7 +21,7 @@ const mergeProps = (propsFromState, propsFromDispatch) => ({
   },
 });
 
-const VisibleCurrentColorView =
-connect(mapStateToProps, mapDispatchToProps, mergeProps)(CurrentColorView);
+const CurrentColorControl =
+connect(mapStateToProps, mapDispatchToProps, mergeProps)(CurrentColor);
 
-export default VisibleCurrentColorView;
+export default CurrentColorControl;

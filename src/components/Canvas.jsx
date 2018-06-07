@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import VisibleCell from '../containers/VisibleCell';
+import '../stylesheets/App.css';
+import CellControl from '../containers/CellControl';
 
 const Canvas = () => {
   const table = [];
@@ -8,22 +8,22 @@ const Canvas = () => {
   for (let i = 0, cellId = 0; i < 35; i += 1) {
     const line = [];
     for (let j = 0; j < 35; j += 1, cellId += 1) {
-      line.push(<VisibleCell
+      line.push(<CellControl
         key={cellId}
         cellId={cellId}
-        cellColor="aliceblue"
+        cellColor='aliceblue'
       />);
     }
     table.push(<div
       key={i}
-      className="canvasLine"
+      className='canvas-line'
     >
       {line}
     </div>);
   }
 
   return (
-    <div className="Canvas">
+    <div className='canvas'>
       {table}
     </div>
   );
