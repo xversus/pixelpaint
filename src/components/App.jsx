@@ -1,6 +1,6 @@
 import React from 'react';
 import '../stylesheets/App.css';
-import Canvas from './Canvas.jsx';
+import Canvas from '../containers/Canvas.js';
 import PaletteControl from '../containers/PaletteControl';
 import NavigationControl from '../containers/NavigationControl';
 

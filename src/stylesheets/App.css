@@ -34,7 +34,7 @@
     border: 1px solid #000;
     margin: 2px auto;
     border-radius: 100px;
-    box-shadow: 3px 3px gray;
+    box-shadow: 3px 3px 5px 2px gray;
 }
 
 .palette-element {
